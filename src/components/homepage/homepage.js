@@ -10,7 +10,7 @@ const Homepage = ({ setLoginUser }) => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch("http://localhost:9002/users");
+            const response = await fetch("https://elansol-backend.onrender.com/users");
             const data = await response.json();
             setUsers(data);
         } catch (error) {
@@ -20,11 +20,11 @@ const Homepage = ({ setLoginUser }) => {
 
     const handleRemoveUser = async (userId) => {
         try {
-            const response = await fetch(`http://localhost:9002/remove/${userId}`, {
+            const response = await fetch(`https://elansol-backend.onrender.com/${userId}`, {
                 method: "DELETE",
             });
             if (response.ok) {
-                // If deletion is successful, fetch updated user list
+                
                 fetchUsers();
             } else {
                 console.error("Failed to remove user");
@@ -43,7 +43,7 @@ const Homepage = ({ setLoginUser }) => {
                         <th>Name</th>
                         <th>DOB</th>
                         <th>Email</th>
-                        <th>Action</th> {/* Added column for action */}
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +54,7 @@ const Homepage = ({ setLoginUser }) => {
                             <td>{user.email}</td>
                             <td>
                                 <button onClick={() => handleRemoveUser(user._id)}>Remove</button>
-                            </td> {/* Added button to remove user */}
+                            </td>
                         </tr>
                     ))}
                 </tbody>

@@ -29,7 +29,7 @@ const Register = () => {
             const { name, dob, email, password } = user
             if( name && dob && email && password){
             
-            axios.post("http://localhost:9002/register", user)
+            axios.post("https://elansol-backend.onrender.com/register", user)
             .then( res => {
                 history.push("/login")
             })
