@@ -1,0 +1,54 @@
+.homepage {
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.borderless-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.borderless-table th, .borderless-table td {
+    border: 1px solid #dddddd;
+    padding: 16px; /* Increased padding for better spacing */
+    text-align: left;
+}
+
+.borderless-table th {
+    background-color: #f2f2f2;
+}
+
+.borderless-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.borderless-table tbody tr:hover {
+    background-color: #ddd;
+}
